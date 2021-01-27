@@ -1,40 +1,36 @@
-# Search CNPJ
+# Mentoria Landing Page Jussi
 
 📃 Sobre
-Este repositório contém as API construídas com o padrão RESTFul em Node.js.
+Este repositório contém as API construídas com o padrão RESTFul em NodeJS.
 
-Essa é a aplicação para a empresa Linx, que é responsável por gerenciar todas as lojas e os servidores SiTef com o intuíto de simplicar e melhorar a produtividade da equipe de cadastros e consultas, principalmente o suporte.
+Essa é a aplicação para a empresa Jussi, uma agência de marketing e desenvolvimento que está com uma demanda interna para conseguir automatizar o seu processo de criação de Landing Pages em seu time de desenvolvimento.
 
-Node.js: é uma API REST que faz todo o CRUD da aplicação, persistência de dados, tratativa de exceções e que serve todas as informações para front end.
+Sobre o backend: irá servir diversas API's RESTFul para o frontend consumir, fará todo o CRUD da aplicação, persistência de dados, tratativa de exceções e testes automatizados para facilitar no desenvolvimento da aplicação.
 
 📚 Requisitos
 Ter Git para clonar o projeto.
-Ter Node.js instalado.
+Ter o Node instalado.
 Ter Docker rodando um container PostgreSQL.
 🚀 Começando
 
 # Clonar o projeto:
 
-\$ git clone https://github.com/maxtrodaro/search-cnpj-backend.git
+\$ git clone https://github.com/maxtrodaro/mentoria-jussi-lp.git
 
 ⚙️ Iniciando back-end
 
-# Entrar no diretório do back-end:
-
-\$ cd backend
-
 # Instalar as dependências:
 
-\$ npm install
+\$ yarn install
 
 # Criar o banco de dados:
 
-\$ npm run createdb
+\$ yarn run createdb
 
 # Rodar as migrations:
 
-\$ npm run database
+\$ yarn run database
 
 # Rodar a aplicação:
 
-\$ npm start
+\$ yarn start
