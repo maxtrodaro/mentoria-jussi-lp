@@ -13,10 +13,6 @@ class Store extends Model {
 			}
 		);
 	}
-
-	static associate(models) {
-		this.belongsTo(models.Server, { foreignKey: "serv_ip", as: "server" });
-	}
 }
 
 module.exports = Store;

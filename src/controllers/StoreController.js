@@ -1,5 +1,4 @@
 const Store = require("../models/Store");
-const ServerStore = require("../models/Server");
 const yup = require("yup");
 
 module.exports = {
@@ -8,22 +7,6 @@ module.exports = {
 
 		if (store.length < 1) {
 			return response.json({ error: "Ainda não existem lojas" });
-		}
-
-		return response.json(store);
-	},
-
-	async getStoresWithServer(request, response) {
-		const { ip } = request.params;
-
-		const store = await Store.findAndCountAll({
-			where: {
-				serv_ip: ip,
-			},
-		});
-
-		if (store.length < 1) {
-			return response.json({ error: "Ainda não existem lojas nesse servidor" });
 		}
 
 		return response.json(store);
@@ -51,16 +34,6 @@ module.exports = {
 
 		const { serv_ip } = request.params;
 		const { name, cnpj, cod_emp } = request.body;
-
-		const server = await ServerStore.findOne({
-			where: {
-				ip: serv_ip,
-			},
-		});
-
-		if (!server) {
-			return response.status(400).json({ error: "Servidor não encontrado" });
-		}
 
 		const storeCnpj = await Store.findOne({
 			where: {
@@ -136,16 +109,6 @@ module.exports = {
 
 		if (!store) {
 			return response.status(400).json({ error: "Loja não encontrada" });
-		}
-
-		const validServer = await ServerStore.findOne({
-			where: {
-				ip: serv_ip,
-			},
-		});
-
-		if (!validServer) {
-			return response.status(400).json({ error: "Servidor não encontrado!" });
 		}
 
 		const validStore = await Store.findOne({
