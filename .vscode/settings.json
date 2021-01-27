@@ -1,0 +1,11 @@
+{
+	"workbench.colorCustomizations": {
+		"titleBar.activeForeground": "#000",
+		"titleBar.inactiveForeground": "#000",
+		"titleBar.activeBackground": "#00FF95",
+		"titleBar.inactiveBackground": "#00FF95"
+	},
+	"editor.formatOnSave": true,
+	"files.trimTrailingWhitespace": true,
+	"editor.detectIndentation": true
+}
